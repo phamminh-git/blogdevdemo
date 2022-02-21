@@ -3,7 +3,7 @@ description: Tư duy đột phá
 seo_description: Tư duy đột phá
 avatar: images/logo.gif
 baseurl: 
-site_url: "https://tuduydotpha.vn"
+site_url: "https://phamminh-git.github.io"
 default_post_avatar: images/logo.gif
 permalink: /:title.html
 version: v1.2.0
