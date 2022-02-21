@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tư duy đột phá</title>
+    <description>Tư duy đột phá</description>
+    <link>http://localhost:4000</link>
+    <atom:link href="http://localhost:4000feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Chuẩn bị tết thế nào để có một cái tết 2022 ý nghĩa?</title>
+        <description>Một năm bận rộn sắp đi qua, không khí Tết đang tràn ngập trên mọi nẻo đường. Đây có lẽ là dịp lễ đặc biệt nhất trong năm, là lúc mà mọi người tất bật chuẩn bị dọn dẹp nhà cửa, trang trí để chào đón năm mới.</description>
+        <author>Laptrinhcuocsong.com</author>
+        <pubDate>Sat, 16 Jan 2021 00:00:00 +0700</pubDate>
+        <link>http://localhost:4000/chuan-bi-tet-the-nao-de-co-mot-cai-tet-2022-y-nghia.html</link>
+        <guid isPermaLink="true">http://localhost:4000/chuan-bi-tet-the-nao-de-co-mot-cai-tet-2022-y-nghia.html</guid>
+      </item>
+    
+  </channel>
+</rss>

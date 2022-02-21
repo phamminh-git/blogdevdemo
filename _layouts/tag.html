@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<div class="row">
+<div class="col-lg-8 mx-auto">
+  <div class="category_detail">
+      <h1 class="mb-4 pb-4 border-bottom">{{page.title}}</h1>
+      <p>{% if page.content_text %}{{page.content_text}}{% else %}{{page.excerpt}}{% endif %}</p>
+  </div>
+  {% for post in site.posts %}
+  {% if post.tags contains page.tag_name %}
+  <article class="post row my-2 my-sm-4" itemscope itemtype="http://schema.org/Article">
+    {% if post.thumbnail %}
+    <a class="col-3" href="{{ post.url }}">
+      <img itemprop="image" src="/images/{{ post.thumbnail }}" title="{{ post.title | xml_escape }}" alt="{{ post.title | xml_escape }}" class="rounded post_thumbnail">
+    </a>
+    {% else %}
+    <a class="col-3" href="{{ post.url }}">
+      <img itemprop="image" src="/images/thumbnail_default.png" alt="{{ post.title  | xml_escape }}" class="rounded post_thumbnail">
+    </a>
+    {% endif %}
+    <div class="col-9 pl-0 excerpt" itemprop="description">
+      <h2 itemprop="name" class="h4"><a itemprop="url" href="{{ post.url }}" title="{{ post.title | xml_escape }}" >{{ post.title | xml_escape }}</a></h1>
+      <div class="d-none d-sm-block">{{ post.excerpt }}</div>
+    </div>
+  </article>
+  <hr>
+  {%endif%}
+  {% endfor %}
+</div>
+</div>

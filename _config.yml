@@ -1,0 +1,130 @@
+name: Tư duy đột phá
+description: Tư duy đột phá
+seo_description: Tư duy đột phá
+avatar: images/logo.gif
+baseurl: 
+site_url: "https://tuduydotpha.vn"
+default_post_avatar: images/logo.gif
+permalink: /:title.html
+version: v1.2.0
+markdown: kramdown
+syntax_highlighter: rouge
+category_configs:
+  -
+    name: Chuyện lập trình
+    url: chuyen-lap-trinh.html
+  -
+    name: Chuyện nghề nghiệp
+    url: chuyen-nghe-nghiep.html
+  -
+    name: Chuyện bên lề
+    url: chuyen-ben-le.html
+  -
+    name: Linux - ubuntu
+    url: linux-ubuntu.html
+  -
+    name: Chuyện cuộc sống
+    url: chuyen-cuoc-song.html
+
+tags_config:
+  -
+    slug: hacking-co-ban
+    name: Hacking cơ bản
+  -
+    slug: hoc-hack-co-ban
+    name: Học hack cơ bản
+  -
+    slug: hoc-ubuntu
+    name: Học ubuntu
+  -
+    slug: lap-trinh-game-bang-javascript
+    name: Lập trình game javascript
+  -
+    slug: lap-trinh-javascript
+    name: Lập trình javascript
+  -
+    slug: lap-trinh-mot-game-don-gian
+    name: Lập trình game đơn giản
+  -
+    slug: tu-hoc-linux
+    name: Tự học linux
+  -
+    slug: jquery
+    name: Jquery
+  -
+    slug: kinh-nghiem-phong-van-xin-viec-cntt
+    name: Kinh nghiệm phỏng vấn
+  -
+    slug: lap-trinh-php
+    name: Lập trình php
+  -
+    slug: lap-trinh-web
+    name: Lập trình web
+  -
+    slug: live-stream-lap-trinh
+    name: Live stream lập trình
+  -
+    slug: cach-tro-thanh-hacker-mu-den
+    name: Cách trở thành hacker mũ đen
+  -
+    slug: day-lam-hacker-tu-a-z
+    name: Dạy làm hacker từ A đến Z
+  -
+    slug: doi-song-lap-trinh-vien
+    name: Đời sống lập trình viên
+  -
+    slug: nganh-lap-trinh-vien
+    name: Ngành lập trình viên
+  -
+    slug: cach-lap-trinh-game
+    name: Cách lập trình game
+  -
+    slug: bi-quyet-hoc-lap-trinh
+    name: Bí quyết học lập trình
+  -
+    slug: nhung-dieu-co-ban-ve-lap-trinh
+    name: Những điều cơ bản về lập trình
+  -
+    slug: lap-trinh-vien
+    name: Lập trình viên
+  -
+    slug: nghe-lap-trinh-vien-hien-nay
+    name: Nghề lập trình viên hiện nay
+  -
+    slug: cach-hoc-lap-trinh-cho-nguoi-chua-biet-gi
+    name: Cách học lập trình cho người chưa biết gì
+  -
+    slug: hoc-lap-trinh-nhu-the-nao
+    name: học lập trình như thế nào
+  -
+    slug: raspberry-pi
+    name: Raspberry pi, orange pi
+  -
+    slug: viet-blog
+    name: viết blog
+  -
+    slug: sinh-vien-it
+    name: sinh viên it
+  -
+    slug: hoc-lap-trinh
+    name: học lập trình
+  -
+    slug: hoc-lap-trinh-co-ban
+    name: học lập trình cơ bản
+sass:
+  style: :compressed
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+defaults:
+  values:
+    layout: "post"
+# Exclude these files from your production _site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - CNAME
+  
+# paginate
+paginate: 15

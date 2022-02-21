@@ -1,0 +1,20 @@
+{% for post in include.posts %}
+<article class="post row my-2 my-sm-4" itemscope itemtype="http://schema.org/Article">
+  {% if post.thumbnail %}
+  <a class="col-3" href="{{ post.url }}">
+    <img itemprop="image" src="/images/{{ post.thumbnail }}" title="{{ post.title | xml_escape }}" alt="{{ post.title | xml_escape }}" class="rounded post_thumbnail">
+  </a>
+  {% else %}
+  <a class="col-3" href="{{ post.url }}">
+    <img itemprop="image" src="/images/thumbnail_default.png" alt="{{ post.title  | xml_escape }}" class="rounded post_thumbnail">
+  </a>
+  {% endif %}
+  <div class="col-9 pl-0 excerpt">
+    <h2 itemprop="name" class="h6 sm-h5 md-h4">
+      <a itemprop="url" href="{{ post.url }}" title="{{ post.title | xml_escape }}" >{{ post.title | xml_escape }}</a>
+    </h2>
+    <div class="d-none d-sm-block" itemprop="description">{{ post.excerpt }}</div>
+  </div>
+</article>
+<hr>
+{% endfor %}

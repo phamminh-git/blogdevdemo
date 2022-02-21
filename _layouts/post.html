@@ -1,0 +1,74 @@
+---
+layout: default
+---
+<div class="row">
+<article class="post col-md-9 col-lg-7 mx-auto post-detail noselect" itemscope itemtype="http://schema.org/Article">
+  <h1 itemprop="name" class="mb-3 pb-3 h2 md-h1 border-bottom">{{ page.title }}</h1>
+  <div class="post-body" itemprop="articleBody">
+    <div>
+    {{ content }}
+    </div>
+    <div>
+    Chuyên mục:
+    {% for site_category in site.category_configs %}
+      {% for category in page.categories %}
+        {% if category == site_category.name %}
+        <a href="/{{ site_category.url }}" target="_blank">{{ category }}</a>{% unless forloop.last %},{% endunless %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+    </div>
+    {% if page.tags %}
+    <div>
+    Tag:
+    {% for site_tag in site.tags_config %}{% for tag in page.tags %}{% if tag == site_tag.slug %}
+      <a href="/tags/{{ tag }}" target="_blank">{{ site_tag.name }}</a>{% unless forloop.last %},{% endunless %}
+      {% endif %}{% endfor %}{% endfor %}
+    </div>
+    {% endif %}
+    <div class="my-4">
+      <div class="fb-like" data-href="{{ site.site_url_http }}{{ page.url }}" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="true"></div>
+    </div>
+  </div>
+</article>
+</div>
+{% if page.related_posts %}
+
+<div class="row mt-5 mb-3">
+  <div class="col-lg-8 mx-auto">
+    <h3 class="h4 mb-2">Có thể bạn thích:</h3>
+    <ul class="related_posts row px-0">
+      {% for related_post in page.related_posts %}{% for post in site.posts %}{% assign full_post_url = site.site_url | append: post.url %}{% if related_post.link == full_post_url %}
+        <li class="col-6 col-md-3">
+        {% if post.thumbnail %}
+        <a href="{{ post.url }}" target="_blank"><img class="mw-100" src="/images/{{ post.thumbnail }}" alt="{{ post.title }}"></a>
+        {% else %}
+        <a href="{{ post.url }}" target="_blank"><img class="mw-100" src="/images/thumbnail_default.png" alt="{{ post.title }}"></a>
+        {% endif %}
+        <h3 class="h6 mt-2"><a href="{{ post.url }}" title="{{ post.title | xml_escape }}" target="_blank">{{ post.title | xml_escape }}</a></h3>
+        </li>
+      {% endif %}{% endfor %}{% endfor %}
+    </ul>
+  </div>
+</div>
+
+{% endif %}
+
+{% if page.related_videos %}
+
+<div class="row mb-5">
+  <div class="col-lg-8 mx-auto">
+    <h3 class="h4 mb-2">Video liên quan:</h3>
+    <ul class="related_posts row px-0">
+    {% for video in page.related_videos %}
+      <li class="col-6 col-md-3">
+      <a href="https://www.youtube.com/watch?v={{ video.id }}" target="_blank">
+        <img class="mw-100" src="https://img.youtube.com/vi/{{ video.id }}/mqdefault.jpg" alt="{{ video.title }}">
+      </a>
+      <h3 class="h6 mt-2"><a href="https://www.youtube.com/watch?v={{ video.id }}" title="{{ video.title }}" target="_blank">{{ video.title }}</a></h3>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endif %}
